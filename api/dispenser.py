@@ -2,13 +2,12 @@ import json
 import uuid
 
 from flask import request
-from flask_restful import Api, Resource
+from flask_restful import Resource
 
+from api import api
 from models.dispenser import Dispenser, db
-import config
-from schemas.dispenser import DispenserSchema
 
-api = Api(prefix=config.API_PREFIX)
+from schemas.dispenser import DispenserSchema
 
 
 class DispenserAPI(Resource):
